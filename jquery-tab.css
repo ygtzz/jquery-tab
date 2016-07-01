@@ -1,4 +1,4 @@
-.tabContainer { width: 450px; border: 1px solid #d3d3d3; font-size: 12px; }
+.tabContainer { width: 100%; border: 1px solid #d3d3d3; font-size: 12px; }
 .tabContainer ul { list-style: none; margin: 0; padding: 0; }
 .tabContainer a { text-decoration: none; }
 .tab-menu { overflow: hidden; background: #f7f7f7; }

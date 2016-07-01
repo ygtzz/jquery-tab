@@ -15,29 +15,32 @@
     $(function() {
         $('div.tabContainer').tab({
             sEvent: 'mouseover',
-            nAuto: 1000
+            nAuto: 0
         });
     });
     </script>
 </head>
 <body>
     <div class="tabContainer center">
-        <ul class="tab-menu">
-            <li class="tab-menu-item tab-menu-current j-menu-item">
+        <ul class="tab-menu j-tab-menu">
+            <li class="tab-menu-item tab-menu-current j-tab-nav">
                 <a href="javascript:;">jquery特效</a>
             </li>
-            <li class="tab-menu-item j-menu-item">
+            <li class="tab-menu-item j-tab-nav">
                 <a href="javascript:;">JavaScript特效</a>
             </li>
-            <li class="tab-menu-item j-menu-item">
+            <li class="tab-menu-item j-tab-nav">
                 <a href="javascript:;">div+css教程</a>
             </li>
-            <li class="tab-menu-item j-menu-item">
+            <li class="tab-menu-item j-tab-nav">
                 <a href="javascript:;">html5教程</a>
             </li>
+            <li class="tab-menu-item j-tab-add">
+                <a href="javascript:;">+</a>
+            </li>
         </ul>
-        <div class="tab-box">
-            <div class="tab-box-item">
+        <div class="tab-box j-tab-box">
+            <div class="tab-box-item j-tab-item">
                 <ul>
                     <li>
                         <a href="javascript:;">jquery smartFloat插件制作仿产品列表页默认排序搜索框</a>
@@ -64,7 +67,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tab-box-item tab-box-hide">
+            <div class="tab-box-item tab-box-hide j-tab-item">
                 <ul>
                     <li>
                         <a href="javascript:;">javascript jscolor colorpicker js颜色选择器插件10多种调用颜色</a>
@@ -91,7 +94,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tab-box-item tab-box-hide">
+            <div class="tab-box-item tab-box-hide j-tab-item">
                 <ul>
                     <li>
                         <a href="javascript:;">div+css制作非常实用的24款分页页码css代码</a>
@@ -118,7 +121,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tab-box-item tab-box-hide">
+            <div class="tab-box-item tab-box-hide j-tab-item">
                 <ul>
                     <li>
                         <a href="javascript:;">jquery HTML5 幻灯片插件 用 Canvas 制作类似百叶窗拍摄快门</a>

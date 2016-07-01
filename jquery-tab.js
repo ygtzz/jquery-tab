@@ -7,8 +7,11 @@
 			nAuto: 0
 		}, options);
 		var self = $(this),
-			oTabMenus = self.find('li.tab-menu-item'),
-			oTabBoxs = self.find('div.tab-box-item'),
+			oTabMenuWrap = self.find('.j-tab-menu'),
+			oTabMenus = self.find('.j-tab-nav'),
+			oTabBoxWrap = self.find('.j-tab-box'),
+			oTabBoxs = self.find('.j-tab-item'),
+			oTabAdd = self.find('.j-tab-add')
 			oTimer = null,
 			nAutoIndex = -1;
 
@@ -38,11 +41,21 @@
 					};
 					fMenuHandle(oTabMenus.eq(nAutoIndex), settings.fCallback);
 				}, settings.nAuto);
+			},
+			fTabAdd = function(){
+				var nLen = oTabMenus.length;
+				$(oTabMenus[0]).clone().find('a').html('Tab ' + nLen).end().insertBefore(oTabAdd);
+				$(oTabBoxs[0]).clone().html('').appendTo(oTabBoxWrap);
+				oTabMenus = self.find('.j-tab-nav'),
+				oTabBoxs = self.find('.j-tab-item');
 			};
 
 		//绑定事件
-		self.on(settings.sEvent, 'li.j-menu-item', function() {
+		self.on(settings.sEvent, '.j-tab-nav', function() {
 			fDelayHandle($(this), settings.nTimeout, settings.fCallback);
+		});
+		self.on('click','.j-tab-add',function(){
+			fTabAdd();
 		});
 		//自动播放
 		if (settings.nAuto) {
